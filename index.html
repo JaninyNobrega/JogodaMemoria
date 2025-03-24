@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória - Patrulha Canina</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🐾 Jogo da Memória 🐾</h1>
+        
+        <div class="game-controls">
+            <div class="game-info">
+                <div id="timer">⏱️ Tempo: 00:00</div>
+                <div id="move-counter">🔢 Movimentos: 0</div>
+            </div>
+            <div class="volume-control">
+                <span class="volume-icon">🔊</span>
+                <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+            </div>
+        </div>
+        
+        <div class="memory-game" id="memory-game"></div>
+        
+        <button id="restart-button" class="btn-restart">🔄 Novo Jogo</button>
+        
+        <!-- Mensagem de pré-visualização -->
+        <div id="preview-message" class="message-preview">
+            <h2>Memorize as cartas!</h2>
+            <div class="countdown">3</div>
+        </div>
+        
+        <!-- Mensagem de vitória -->
+        <div id="message" class="message-hidden"></div>
+    </div>
+
+    <!-- Sons (pré-carregados) -->
+    <audio id="flip-sound" src="sounds/flip.wav" preload="auto"></audio>
+    <audio id="match-sound" src="sounds/match.wav" preload="auto"></audio>
+    <audio id="error-sound" src="sounds/error.wav" preload="auto"></audio>
+    <audio id="win-sound" src="sounds/win.mp3" preload="auto"></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
